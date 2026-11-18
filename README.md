@@ -1,4 +1,5 @@
 # String Algorithms in Python
+![tests](https://github.com/Emmimal/string-algorithms-in-python/actions/workflows/tests.yml/badge.svg)
 
 Complete, tested code for the EmiTechLogic guide
 **[String Algorithms in Python: Essential Patterns and Techniques](https://emitechlogic.com/string-algorithms-in-python/)**.
