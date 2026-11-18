@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1280" width="1800" height="1280" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="t">Why += is slow and join() is fast in Python</title>
+<desc id="d">Left: building a string with += copies the whole string at every step, so copies add up as 0+1+2+3+4 = 10. Right: collecting pieces in a list and calling join once copies each character only once.</desc>
+<rect width="1800" height="1280" fill="#FFFFFF"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#111827">
+<text x="900" y="85" font-size="56" text-anchor="middle">Why += Is Slow and join() Is Fast</text>
+<text x="900" y="140" font-size="32" text-anchor="middle" fill="#374151">Python strings are immutable, so every change builds a new string</text>
+
+<rect x="40" y="180" width="840" height="900" rx="28" fill="#FEF2F2" stroke="#DC2626" stroke-width="4"/>
+<rect x="920" y="180" width="840" height="900" rx="28" fill="#ECFDF5" stroke="#059669" stroke-width="4"/>
+<text x="460" y="255" font-size="42" text-anchor="middle" fill="#B91C1C" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">Slow: result += part</text>
+<text x="460" y="302" font-size="28" text-anchor="middle" fill="#374151">A new string is built at every step</text>
+<text x="1340" y="255" font-size="42" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">Fast: "".join(parts)</text>
+<text x="1340" y="302" font-size="28" text-anchor="middle" fill="#374151">Collect first, copy once at the end</text>
+<text x="70" y="393" font-size="32">Step 1</text>
+<rect x="215" y="345" width="70" height="70" rx="10" fill="#2563EB" stroke="#1E3A8A" stroke-width="4"/>
+<text x="250" y="394" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<text x="660" y="393" font-size="30" fill="#B91C1C">copies: 0</text>
+<text x="70" y="518" font-size="32">Step 2</text>
+<rect x="215" y="470" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="250" y="519" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="295" y="470" width="70" height="70" rx="10" fill="#2563EB" stroke="#1E3A8A" stroke-width="4"/>
+<text x="330" y="519" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<text x="660" y="518" font-size="30" fill="#B91C1C">copies: 1</text>
+<text x="70" y="643" font-size="32">Step 3</text>
+<rect x="215" y="595" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="250" y="644" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="295" y="595" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="330" y="644" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="375" y="595" width="70" height="70" rx="10" fill="#2563EB" stroke="#1E3A8A" stroke-width="4"/>
+<text x="410" y="644" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<text x="660" y="643" font-size="30" fill="#B91C1C">copies: 2</text>
+<text x="70" y="768" font-size="32">Step 4</text>
+<rect x="215" y="720" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="250" y="769" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="295" y="720" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="330" y="769" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="375" y="720" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="410" y="769" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="455" y="720" width="70" height="70" rx="10" fill="#2563EB" stroke="#1E3A8A" stroke-width="4"/>
+<text x="490" y="769" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">d</text>
+<text x="660" y="768" font-size="30" fill="#B91C1C">copies: 3</text>
+<text x="70" y="893" font-size="32">Step 5</text>
+<rect x="215" y="845" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="250" y="894" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="295" y="845" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="330" y="894" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="375" y="845" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="410" y="894" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="455" y="845" width="70" height="70" rx="10" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="490" y="894" font-size="38" text-anchor="middle" fill="#111827" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">d</text>
+<rect x="535" y="845" width="70" height="70" rx="10" fill="#2563EB" stroke="#1E3A8A" stroke-width="4"/>
+<text x="570" y="894" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<text x="660" y="893" font-size="30" fill="#B91C1C">copies: 4</text>
+<rect x="80" y="960" width="760" height="100" rx="18" fill="#FFFFFF" stroke="#DC2626" stroke-width="4"/>
+<text x="460" y="1005" font-size="34" text-anchor="middle">Copied so far: 0+1+2+3+4 = 10</text>
+<text x="460" y="1045" font-size="30" text-anchor="middle" fill="#B91C1C">Work grows like O(n²)</text>
+<text x="1340" y="365" font-size="34" text-anchor="middle">1. Collect pieces in a list</text>
+<rect x="990" y="390" width="700" height="130" rx="20" fill="#FFFFFF" stroke="#059669" stroke-width="4" stroke-dasharray="14 8"/>
+<rect x="1105" y="420" width="70" height="70" rx="10" fill="#10B981" stroke="#065F46" stroke-width="4"/>
+<text x="1140" y="469" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="1205" y="420" width="70" height="70" rx="10" fill="#10B981" stroke="#065F46" stroke-width="4"/>
+<text x="1240" y="469" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1305" y="420" width="70" height="70" rx="10" fill="#10B981" stroke="#065F46" stroke-width="4"/>
+<text x="1340" y="469" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="1405" y="420" width="70" height="70" rx="10" fill="#10B981" stroke="#065F46" stroke-width="4"/>
+<text x="1440" y="469" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">d</text>
+<rect x="1505" y="420" width="70" height="70" rx="10" fill="#10B981" stroke="#065F46" stroke-width="4"/>
+<text x="1540" y="469" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<text x="1340" y="568" font-size="32" text-anchor="middle" fill="#047857">parts.append(piece) copies nothing</text>
+<line x1="1340" y1="600" x2="1340" y2="672" stroke="#059669" stroke-width="10" stroke-linecap="round"/>
+<polygon points="1308,664 1372,664 1340,712" fill="#059669"/>
+<text x="1300" y="660" font-size="34" text-anchor="end">2. Join once</text>
+<text x="1385" y="660" font-size="36" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">"".join(parts)</text>
+<rect x="1145" y="735" width="70" height="70" rx="10" fill="#047857" stroke="#064E3B" stroke-width="4"/>
+<text x="1180" y="784" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="1225" y="735" width="70" height="70" rx="10" fill="#047857" stroke="#064E3B" stroke-width="4"/>
+<text x="1260" y="784" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1305" y="735" width="70" height="70" rx="10" fill="#047857" stroke="#064E3B" stroke-width="4"/>
+<text x="1340" y="784" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="1385" y="735" width="70" height="70" rx="10" fill="#047857" stroke="#064E3B" stroke-width="4"/>
+<text x="1420" y="784" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">d</text>
+<rect x="1465" y="735" width="70" height="70" rx="10" fill="#047857" stroke="#064E3B" stroke-width="4"/>
+<text x="1500" y="784" font-size="38" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<text x="1340" y="860" font-size="32" text-anchor="middle">One final copy of 5 characters</text>
+<rect x="960" y="960" width="760" height="100" rx="18" fill="#FFFFFF" stroke="#059669" stroke-width="4"/>
+<text x="1340" y="1005" font-size="34" text-anchor="middle">Each character copied once: 5</text>
+<text x="1340" y="1045" font-size="30" text-anchor="middle" fill="#047857">Work grows like O(n)</text>
+<rect x="200" y="1115" width="48" height="48" rx="8" fill="#F59E0B" stroke="#B45309" stroke-width="4"/>
+<text x="268" y="1150" font-size="30">Copied again</text>
+<rect x="620" y="1115" width="48" height="48" rx="8" fill="#2563EB" stroke="#1E3A8A" stroke-width="4"/>
+<text x="688" y="1150" font-size="30">New character</text>
+<rect x="1060" y="1115" width="48" height="48" rx="8" fill="#047857" stroke="#064E3B" stroke-width="4"/>
+<text x="1128" y="1150" font-size="30">Copied once at the end</text>
+<text x="900" y="1230" font-size="26" text-anchor="middle" fill="#374151">CPython sometimes optimizes +=, but Python does not guarantee it. Do not rely on it.</text>
+</g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpmZDJmMTE0NS04MzFiLTRkOWYtOWQ2NC05ZmJiMzA1MjQzMjIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaOntcv6LmJESsSjmU0nnYJ8AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpmZjlmMTY3ZS01YWEwLTQ5OTUtYTg2YS1mYTA5NDgyNGE4ZThscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNomfOvQ5HlATgfkTVkZIN3WAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggBPRt/55Tw8XnjhnTyFOYViZU0wk6si4Hb/8KSzQuDh+kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaFPOB0fzQhNDVHlFP+/gnP4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIPPlp6Z1KHn2GOjn0tr9EJiuYlHHWHAQM+8OdFvHMLGMZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSpMZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmZkMmYxMTQ1LTgzMWItNGQ5Zi05ZDY0LTlmYmIzMDUyNDMyMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjJjMWIxYzBkLTYxYmMtNGY1OC04Y2ZmLTRlNTg3ZDM0NTE4ZHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAE9G3/nlPDxeeOGdPIU5hWJlTTCTqyLgdv/wpLNC4OH6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggDhry0iMtDlNYrK2b5QHSco4iWdaZCjnFP4ljUWe61wKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggYU+v6/evD82O8cjWsysbGgElrvw7Gpcp5k2PCW/LLih0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMGd55qR0mWZSWJES8fj2yP85onI7IR3PVe6xvg2xsCTQcCOu/5S7hae6uNMaQemG+nOSdqs9Sk+VjNmx8RuA3g=</c2pa:manifest></metadata></svg>

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 1480" width="1800" height="1480" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="t">Counter tally for listen and silent</title>
+<desc id="d">Two tally tables built with collections.Counter. Counter of listen and Counter of silent both count the letters e, i, l, n, s and t once each, so the tables match and the words are anagrams.</desc>
+<rect width="1800" height="1480" fill="#FFFFFF"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#111827">
+<text x="900" y="90" font-size="58" text-anchor="middle">Counter Tally: "listen" and "silent"</text>
+<text x="900" y="145" font-size="32" text-anchor="middle" fill="#374151">Same letters with the same counts, so the two words are anagrams</text>
+<text x="450" y="228" font-size="40" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">Counter("listen")</text>
+<rect x="185" y="256" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="225" y="313" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">l</text>
+<rect x="275" y="256" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="315" y="313" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">i</text>
+<rect x="365" y="256" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="405" y="313" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">s</text>
+<rect x="455" y="256" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="495" y="313" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">t</text>
+<rect x="545" y="256" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="585" y="313" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<rect x="635" y="256" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="675" y="313" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">n</text>
+<line x1="450" y1="352" x2="450" y2="398" stroke="#2563EB" stroke-width="9" stroke-linecap="round"/>
+<polygon points="428,392 472,392 450,426" fill="#2563EB"/>
+<text x="494" y="395" font-size="30" fill="#1E3A8A">count each letter</text>
+<rect x="80" y="446" width="740" height="80" rx="16" fill="#2563EB"/>
+<text x="180" y="499" font-size="34" text-anchor="middle" fill="#FFFFFF">Letter</text>
+<text x="450" y="499" font-size="34" text-anchor="middle" fill="#FFFFFF">Tally</text>
+<text x="700" y="499" font-size="34" text-anchor="middle" fill="#FFFFFF">Count</text>
+<rect x="80" y="526" width="740" height="100" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
+<text x="180" y="592" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<line x1="450" y1="550" x2="450" y2="602" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="700" y="592" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="80" y="626" width="740" height="100" fill="#FFFFFF" stroke="#2563EB" stroke-width="3"/>
+<text x="180" y="692" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">i</text>
+<line x1="450" y1="650" x2="450" y2="702" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="700" y="692" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="80" y="726" width="740" height="100" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
+<text x="180" y="792" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">l</text>
+<line x1="450" y1="750" x2="450" y2="802" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="700" y="792" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="80" y="826" width="740" height="100" fill="#FFFFFF" stroke="#2563EB" stroke-width="3"/>
+<text x="180" y="892" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">n</text>
+<line x1="450" y1="850" x2="450" y2="902" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="700" y="892" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="80" y="926" width="740" height="100" fill="#DBEAFE" stroke="#2563EB" stroke-width="3"/>
+<text x="180" y="992" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">s</text>
+<line x1="450" y1="950" x2="450" y2="1002" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="700" y="992" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="80" y="1026" width="740" height="100" fill="#FFFFFF" stroke="#2563EB" stroke-width="3"/>
+<text x="180" y="1092" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">t</text>
+<line x1="450" y1="1050" x2="450" y2="1102" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="700" y="1092" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<text x="1350" y="228" font-size="40" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">Counter("silent")</text>
+<rect x="1085" y="256" width="80" height="80" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="5"/>
+<text x="1125" y="313" font-size="46" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">s</text>
+<rect x="1175" y="256" width="80" height="80" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="5"/>
+<text x="1215" y="313" font-size="46" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">i</text>
+<rect x="1265" y="256" width="80" height="80" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="5"/>
+<text x="1305" y="313" font-size="46" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">l</text>
+<rect x="1355" y="256" width="80" height="80" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="5"/>
+<text x="1395" y="313" font-size="46" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<rect x="1445" y="256" width="80" height="80" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="5"/>
+<text x="1485" y="313" font-size="46" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">n</text>
+<rect x="1535" y="256" width="80" height="80" rx="14" fill="#CCFBF1" stroke="#0D9488" stroke-width="5"/>
+<text x="1575" y="313" font-size="46" text-anchor="middle" fill="#134E4A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">t</text>
+<line x1="1350" y1="352" x2="1350" y2="398" stroke="#0D9488" stroke-width="9" stroke-linecap="round"/>
+<polygon points="1328,392 1372,392 1350,426" fill="#0D9488"/>
+<text x="1394" y="395" font-size="30" fill="#134E4A">count each letter</text>
+<rect x="980" y="446" width="740" height="80" rx="16" fill="#0D9488"/>
+<text x="1080" y="499" font-size="34" text-anchor="middle" fill="#FFFFFF">Letter</text>
+<text x="1350" y="499" font-size="34" text-anchor="middle" fill="#FFFFFF">Tally</text>
+<text x="1600" y="499" font-size="34" text-anchor="middle" fill="#FFFFFF">Count</text>
+<rect x="980" y="526" width="740" height="100" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
+<text x="1080" y="592" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">e</text>
+<line x1="1350" y1="550" x2="1350" y2="602" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="1600" y="592" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="980" y="626" width="740" height="100" fill="#FFFFFF" stroke="#0D9488" stroke-width="3"/>
+<text x="1080" y="692" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">i</text>
+<line x1="1350" y1="650" x2="1350" y2="702" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="1600" y="692" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="980" y="726" width="740" height="100" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
+<text x="1080" y="792" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">l</text>
+<line x1="1350" y1="750" x2="1350" y2="802" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="1600" y="792" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="980" y="826" width="740" height="100" fill="#FFFFFF" stroke="#0D9488" stroke-width="3"/>
+<text x="1080" y="892" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">n</text>
+<line x1="1350" y1="850" x2="1350" y2="902" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="1600" y="892" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="980" y="926" width="740" height="100" fill="#CCFBF1" stroke="#0D9488" stroke-width="3"/>
+<text x="1080" y="992" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">s</text>
+<line x1="1350" y1="950" x2="1350" y2="1002" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="1600" y="992" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<rect x="980" y="1026" width="740" height="100" fill="#FFFFFF" stroke="#0D9488" stroke-width="3"/>
+<text x="1080" y="1092" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">t</text>
+<line x1="1350" y1="1050" x2="1350" y2="1102" stroke="#111827" stroke-width="10" stroke-linecap="round"/>
+<text x="1600" y="1092" font-size="54" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<text x="900" y="498" font-size="32" text-anchor="middle" fill="#047857">match</text>
+<circle cx="900" cy="576" r="38" fill="#059669"/>
+<text x="900" y="594" font-size="52" text-anchor="middle" fill="#FFFFFF">=</text>
+<circle cx="900" cy="676" r="38" fill="#059669"/>
+<text x="900" y="694" font-size="52" text-anchor="middle" fill="#FFFFFF">=</text>
+<circle cx="900" cy="776" r="38" fill="#059669"/>
+<text x="900" y="794" font-size="52" text-anchor="middle" fill="#FFFFFF">=</text>
+<circle cx="900" cy="876" r="38" fill="#059669"/>
+<text x="900" y="894" font-size="52" text-anchor="middle" fill="#FFFFFF">=</text>
+<circle cx="900" cy="976" r="38" fill="#059669"/>
+<text x="900" y="994" font-size="52" text-anchor="middle" fill="#FFFFFF">=</text>
+<circle cx="900" cy="1076" r="38" fill="#059669"/>
+<text x="900" y="1094" font-size="52" text-anchor="middle" fill="#FFFFFF">=</text>
+<rect x="100" y="1176" width="1600" height="270" rx="26" fill="#ECFDF5" stroke="#059669" stroke-width="5"/>
+<text x="900" y="1244" font-size="40" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">Counter("listen") == Counter("silent")</text>
+<text x="900" y="1318" font-size="68" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">True</text>
+<text x="900" y="1372" font-size="32" text-anchor="middle">Counter ignores letter order, so only the counts are compared</text>
+<text x="900" y="1416" font-size="30" text-anchor="middle" fill="#374151">Time O(n)  |  Space O(k) for k distinct letters</text>
+</g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToyNDg0ZDU3MC1iYTY2LTQ1ZjQtOWIyYS04Y2M4Y2ExOGQxZDIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNuEwVjLQMTHp0ePtF16skUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpkMjA3ZGQwOS02NmQ2LTRjNTEtYmIzOC1lOGQ5N2RjZmQ4M2JscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo1NyJX55Xqmw3eryDFwrzRAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggFVJnCYFPWqKcVm7/U98vkEp6srSABBBTx1R0ZLVBSJ6kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaNbYLwpxfmqnlNsh6b9fsPUAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIC8KjmXmtt4YT20YnqdvezTW7BnFJFuMsn2uayPDh825ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GTH6Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjI0ODRkNTcwLWJhNjYtNDVmNC05YjJhLThjYzhjYTE4ZDFkMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjk1Mjc1NmNkLTdlZDQtNDNhYS04YTFjLTlhMjhkOTg0NTJjYXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAVUmcJgU9aopxWbv9T3y+QSnqytIAEEFPHVHRktUFInqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggrXg1j9E745zDKTq/cThnuOzD3D13DTW+1zf8maRMTfuiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggVXGbpcXp15kPg2MkSsMhX0MtgburA7nDziLVITv6eJZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDBEvu8TvTKjCot6h38S53qP7puGpnWIjkXbElXfuB4H62GrAnOmR7GE0rww9dW9VWTBnDg9HlYhmYGJhx2mHwM=</c2pa:manifest></metadata></svg>

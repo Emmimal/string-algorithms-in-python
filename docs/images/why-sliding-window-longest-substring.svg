@@ -1,0 +1,260 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2220" width="1800" height="2220" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="t">Sliding window on abcabcbb</title>
+<desc id="d">Eight steps showing the left and right pointers moving across the string abcabcbb. Right moves one step each time. Left jumps forward past a repeated character and never moves back. The longest window without repeats has length 3.</desc>
+<rect width="1800" height="2220" fill="#FFFFFF"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#111827">
+<text x="900" y="90" font-size="58" text-anchor="middle">Sliding Window on "abcabcbb"</text>
+<text x="900" y="145" font-size="32" text-anchor="middle" fill="#374151">Longest substring without repeating characters. left only moves forward.</text>
+<circle cx="170" cy="215" r="26" fill="#EA580C"/><text x="170" y="226" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<text x="212" y="226" font-size="30">left (window start)</text>
+<circle cx="700" cy="215" r="26" fill="#2563EB"/><text x="700" y="226" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="742" y="226" font-size="30">right (window end)</text>
+<rect x="1220" y="187" width="72" height="56" rx="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="1312" y="226" font-size="30">current window</text>
+<text x="900" y="290" font-size="32" text-anchor="middle" fill="#B45309" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">left = max(left, last_seen.get(ch, -1) + 1)</text>
+<rect x="30" y="328" width="1740" height="192" rx="18" fill="#F8FAFC"/>
+<text x="60" y="400" font-size="36">Step 1</text>
+<text x="60" y="444" font-size="30" fill="#374151">read "a"</text>
+<text x="385" y="352" font-size="26" text-anchor="middle" fill="#6B7280">0</text>
+<rect x="340" y="360" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="385" y="422" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<text x="485" y="352" font-size="26" text-anchor="middle" fill="#6B7280">1</text>
+<rect x="440" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="485" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<text x="585" y="352" font-size="26" text-anchor="middle" fill="#6B7280">2</text>
+<rect x="540" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="585" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<text x="685" y="352" font-size="26" text-anchor="middle" fill="#6B7280">3</text>
+<rect x="640" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="685" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<text x="785" y="352" font-size="26" text-anchor="middle" fill="#6B7280">4</text>
+<rect x="740" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="785" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<text x="885" y="352" font-size="26" text-anchor="middle" fill="#6B7280">5</text>
+<rect x="840" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="885" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<text x="985" y="352" font-size="26" text-anchor="middle" fill="#6B7280">6</text>
+<rect x="940" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="985" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<text x="1085" y="352" font-size="26" text-anchor="middle" fill="#6B7280">7</text>
+<rect x="1040" y="360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="332" y="352" width="106" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="355,460 341,480 369,480" fill="#EA580C"/>
+<circle cx="355" cy="506" r="26" fill="#EA580C"/>
+<text x="355" y="517" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="415,460 401,480 429,480" fill="#2563EB"/>
+<circle cx="415" cy="506" r="26" fill="#2563EB"/>
+<text x="415" y="517" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="396" font-size="36">window: "a"</text>
+<text x="1215" y="440" font-size="32">length 1  |  best 1</text>
+<text x="1215" y="484" font-size="30" fill="#047857">new character, window grows</text>
+<rect x="30" y="528" width="1740" height="192" rx="18" fill="#FFFFFF"/>
+<text x="60" y="600" font-size="36">Step 2</text>
+<text x="60" y="644" font-size="30" fill="#374151">read "b"</text>
+<rect x="340" y="560" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="385" y="622" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="560" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="485" y="622" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="585" y="622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="685" y="622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="785" y="622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="885" y="622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="985" y="622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="332" y="552" width="206" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="385,660 371,680 399,680" fill="#EA580C"/>
+<circle cx="385" cy="706" r="26" fill="#EA580C"/>
+<text x="385" y="717" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="485,660 471,680 499,680" fill="#2563EB"/>
+<circle cx="485" cy="706" r="26" fill="#2563EB"/>
+<text x="485" y="717" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="596" font-size="36">window: "ab"</text>
+<text x="1215" y="640" font-size="32">length 2  |  best 2</text>
+<text x="1215" y="684" font-size="30" fill="#047857">new character, window grows</text>
+<rect x="30" y="728" width="1740" height="192" rx="18" fill="#F8FAFC"/>
+<text x="60" y="800" font-size="36">Step 3</text>
+<text x="60" y="844" font-size="30" fill="#374151">read "c"</text>
+<rect x="340" y="760" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="385" y="822" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="760" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="485" y="822" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="760" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="585" y="822" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="760" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="685" y="822" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="760" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="785" y="822" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="760" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="885" y="822" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="760" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="985" y="822" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="760" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="822" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="332" y="752" width="306" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="385,860 371,880 399,880" fill="#EA580C"/>
+<circle cx="385" cy="906" r="26" fill="#EA580C"/>
+<text x="385" y="917" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="585,860 571,880 599,880" fill="#2563EB"/>
+<circle cx="585" cy="906" r="26" fill="#2563EB"/>
+<text x="585" y="917" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="796" font-size="36">window: "abc"</text>
+<text x="1215" y="840" font-size="32">length 3  |  best 3</text>
+<text x="1215" y="884" font-size="30" fill="#047857">new character, window grows</text>
+<rect x="30" y="928" width="1740" height="192" rx="18" fill="#FFFFFF"/>
+<text x="60" y="1000" font-size="36">Step 4</text>
+<text x="60" y="1044" font-size="30" fill="#374151">read "a"</text>
+<rect x="340" y="960" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="385" y="1022" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="960" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="485" y="1022" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="960" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="585" y="1022" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="960" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="685" y="1022" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="960" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="785" y="1022" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="960" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="885" y="1022" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="960" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="985" y="1022" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="960" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="1022" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="432" y="952" width="306" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="485,1060 471,1080 499,1080" fill="#EA580C"/>
+<circle cx="485" cy="1106" r="26" fill="#EA580C"/>
+<text x="485" y="1117" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="685,1060 671,1080 699,1080" fill="#2563EB"/>
+<circle cx="685" cy="1106" r="26" fill="#2563EB"/>
+<text x="685" y="1117" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="996" font-size="36">window: "bca"</text>
+<text x="1215" y="1040" font-size="32">length 3  |  best 3</text>
+<text x="1215" y="1084" font-size="30" fill="#B45309">"a" seen at 0, so left = 1</text>
+<rect x="30" y="1128" width="1740" height="192" rx="18" fill="#F8FAFC"/>
+<text x="60" y="1200" font-size="36">Step 5</text>
+<text x="60" y="1244" font-size="30" fill="#374151">read "b"</text>
+<rect x="340" y="1160" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="385" y="1222" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1160" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="485" y="1222" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="1160" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="585" y="1222" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="1160" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="685" y="1222" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="1160" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="785" y="1222" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="1160" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="885" y="1222" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="1160" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="985" y="1222" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="1160" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="1222" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="532" y="1152" width="306" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="585,1260 571,1280 599,1280" fill="#EA580C"/>
+<circle cx="585" cy="1306" r="26" fill="#EA580C"/>
+<text x="585" y="1317" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="785,1260 771,1280 799,1280" fill="#2563EB"/>
+<circle cx="785" cy="1306" r="26" fill="#2563EB"/>
+<text x="785" y="1317" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="1196" font-size="36">window: "cab"</text>
+<text x="1215" y="1240" font-size="32">length 3  |  best 3</text>
+<text x="1215" y="1284" font-size="30" fill="#B45309">"b" seen at 1, so left = 2</text>
+<rect x="30" y="1328" width="1740" height="192" rx="18" fill="#FFFFFF"/>
+<text x="60" y="1400" font-size="36">Step 6</text>
+<text x="60" y="1444" font-size="30" fill="#374151">read "c"</text>
+<rect x="340" y="1360" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="385" y="1422" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1360" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="485" y="1422" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="1360" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="585" y="1422" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="1360" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="685" y="1422" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="1360" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="785" y="1422" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="1360" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="885" y="1422" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="1360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="985" y="1422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="1360" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="1422" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="632" y="1352" width="306" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="685,1460 671,1480 699,1480" fill="#EA580C"/>
+<circle cx="685" cy="1506" r="26" fill="#EA580C"/>
+<text x="685" y="1517" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="885,1460 871,1480 899,1480" fill="#2563EB"/>
+<circle cx="885" cy="1506" r="26" fill="#2563EB"/>
+<text x="885" y="1517" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="1396" font-size="36">window: "abc"</text>
+<text x="1215" y="1440" font-size="32">length 3  |  best 3</text>
+<text x="1215" y="1484" font-size="30" fill="#B45309">"c" seen at 2, so left = 3</text>
+<rect x="30" y="1528" width="1740" height="192" rx="18" fill="#F8FAFC"/>
+<text x="60" y="1600" font-size="36">Step 7</text>
+<text x="60" y="1644" font-size="30" fill="#374151">read "b"</text>
+<rect x="340" y="1560" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="385" y="1622" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1560" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="485" y="1622" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="1560" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="585" y="1622" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="1560" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="685" y="1622" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="1560" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="785" y="1622" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="1560" width="90" height="90" rx="14" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="885" y="1622" font-size="46" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="1560" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="985" y="1622" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="1560" width="90" height="90" rx="14" fill="#FFFFFF" stroke="#9CA3AF" stroke-width="5" stroke-dasharray="10 6"/>
+<text x="1085" y="1622" font-size="46" text-anchor="middle" fill="#6B7280" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="832" y="1552" width="206" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="885,1660 871,1680 899,1680" fill="#EA580C"/>
+<circle cx="885" cy="1706" r="26" fill="#EA580C"/>
+<text x="885" y="1717" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="985,1660 971,1680 999,1680" fill="#2563EB"/>
+<circle cx="985" cy="1706" r="26" fill="#2563EB"/>
+<text x="985" y="1717" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="1596" font-size="36">window: "cb"</text>
+<text x="1215" y="1640" font-size="32">length 2  |  best 3</text>
+<text x="1215" y="1684" font-size="30" fill="#B45309">"b" seen at 4, so left = 5</text>
+<rect x="30" y="1728" width="1740" height="192" rx="18" fill="#FFFFFF"/>
+<text x="60" y="1800" font-size="36">Step 8</text>
+<text x="60" y="1844" font-size="30" fill="#374151">read "b"</text>
+<rect x="340" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="385" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="485" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="540" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="585" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="640" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="685" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="740" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="785" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="840" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="885" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">c</text>
+<rect x="940" y="1760" width="90" height="90" rx="14" fill="#E5E7EB" stroke="#9CA3AF" stroke-width="5"/>
+<text x="985" y="1822" font-size="46" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1040" y="1760" width="90" height="90" rx="14" fill="#2563EB" stroke="#1E3A8A" stroke-width="5"/>
+<text x="1085" y="1822" font-size="46" text-anchor="middle" fill="#FFFFFF" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1032" y="1752" width="106" height="106" rx="20" fill="none" stroke="#2563EB" stroke-width="6"/>
+<polygon points="1055,1860 1041,1880 1069,1880" fill="#EA580C"/>
+<circle cx="1055" cy="1906" r="26" fill="#EA580C"/>
+<text x="1055" y="1917" font-size="30" text-anchor="middle" fill="#FFFFFF">L</text>
+<polygon points="1115,1860 1101,1880 1129,1880" fill="#2563EB"/>
+<circle cx="1115" cy="1906" r="26" fill="#2563EB"/>
+<text x="1115" y="1917" font-size="30" text-anchor="middle" fill="#FFFFFF">R</text>
+<text x="1215" y="1796" font-size="36">window: "b"</text>
+<text x="1215" y="1840" font-size="32">length 1  |  best 3</text>
+<text x="1215" y="1884" font-size="30" fill="#B45309">"b" seen at 6, so left = 7</text>
+<rect x="80" y="1980" width="1640" height="190" rx="24" fill="#ECFDF5" stroke="#059669" stroke-width="5"/>
+<text x="900" y="2042" font-size="44" text-anchor="middle" fill="#047857">Answer: 3</text>
+<text x="900" y="2092" font-size="32" text-anchor="middle">right visits each index once and left only moves forward, so time is O(n)</text>
+<text x="900" y="2140" font-size="30" text-anchor="middle" fill="#374151">Space is O(k) for the last_seen dictionary</text>
+</g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjNTMwNmVhOS1kOWM0LTQxY2QtODI0YS1kNDllMmE4ZWZiODYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaBKoCB/bWjpIlBZFO+e/PGQAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjNTM5MTI2My1mZDdmLTQ1YmMtODVjMC05ZTg3ZmFjZWNkOWRscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoJ28en5+zyuUkq12iDMGxawAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggEmpAOnmryu2PerrB0BHUGUT5Jo7qapNrjrQvhQDuWP2kZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaEsZu7qDsTX1O42nKJEl2GAAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIAJoCbB0wV8evRQwerI4uANt2xzVAX4XbD8QAtbx3/MZZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GWo/Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM1MzA2ZWE5LWQ5YzQtNDFjZC04MjRhLWQ0OWUyYThlZmI4Ni9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjFjZjJlZTIwLTkwNDYtNDI2Ny1hMjFiLTQyODJjNmQxZmJlMHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCASakA6eavK7Y96usHQEdQZRPkmjupqk2uOtC+FAO5Y/aJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggQKO73XQrtyg2zsvJ8RSot+7xdACouNzyHrDdxqGzjXGiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggLPQ4EztD5pndWe3A09aRd/ZZVP8W7IPm5/znwi2i5Eh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPKDUdS4nJIrWxw52bymvuYjWyJGCNyJ5fgIxAHc6ULEffMkv2fICyLtaKn/pgV8f5812qjW4HRalpPAWQ42Vlg=</c2pa:manifest></metadata></svg>

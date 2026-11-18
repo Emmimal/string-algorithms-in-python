@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2340" width="1800" height="2340" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="t">Decision tree for choosing a string algorithm pattern</title>
+<desc id="d">A top-to-bottom decision tree. Six yes or no questions about the problem lead to a technique: sliding window, hash map or Counter, prefix counts, two pointers, find or KMP, and trie. If none match, re-read the problem and check whether it asks for a substring or a subsequence.</desc>
+<rect width="1800" height="2340" fill="#FFFFFF"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#111827">
+<text x="900" y="90" font-size="58" text-anchor="middle">Which String Pattern Should You Use?</text>
+<text x="900" y="145" font-size="32" text-anchor="middle" fill="#374151">Answer each question from the top. The first "Yes" gives your technique.</text>
+<rect x="210" y="200" width="500" height="80" rx="40" fill="#111827"/>
+<text x="460" y="254" font-size="38" text-anchor="middle" fill="#FFFFFF">Read the problem</text>
+<line x1="460" y1="284" x2="460" y2="322" stroke="#111827" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,316 480,316 460,340" fill="#111827"/>
+<rect x="80" y="340" width="760" height="160" rx="28" fill="#F8FAFC" stroke="#111827" stroke-width="5"/>
+<circle cx="140" cy="420" r="32" fill="#111827"/>
+<text x="140" y="432" font-size="36" text-anchor="middle" fill="#FFFFFF">1</text>
+<text x="510" y="412" font-size="36" text-anchor="middle">Is the answer a contiguous</text>
+<text x="510" y="458" font-size="36" text-anchor="middle">substring that follows a rule?</text>
+<line x1="840" y1="420" x2="940" y2="420" stroke="#047857" stroke-width="9" stroke-linecap="round"/>
+<polygon points="934,400 934,440 960, 420" fill="#047857"/>
+<text x="894" y="398" font-size="36" text-anchor="middle" fill="#047857">Yes</text>
+<rect x="960" y="340" width="760" height="160" rx="28" fill="#DBEAFE" stroke="#2563EB" stroke-width="6"/>
+<text x="1340" y="414" font-size="48" text-anchor="middle" fill="#1E3A8A">Sliding window</text>
+<text x="1340" y="466" font-size="32" text-anchor="middle" fill="#374151">Longest unique substring</text>
+<line x1="460" y1="500" x2="460" y2="602" stroke="#B91C1C" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,596 480,596 460,620" fill="#B91C1C"/>
+<text x="496" y="574" font-size="36" fill="#B91C1C">No</text>
+<rect x="80" y="620" width="760" height="160" rx="28" fill="#F8FAFC" stroke="#111827" stroke-width="5"/>
+<circle cx="140" cy="700" r="32" fill="#111827"/>
+<text x="140" y="712" font-size="36" text-anchor="middle" fill="#FFFFFF">2</text>
+<text x="510" y="692" font-size="36" text-anchor="middle">Do you need counts, repeats,</text>
+<text x="510" y="738" font-size="36" text-anchor="middle">or an anagram check?</text>
+<line x1="840" y1="700" x2="940" y2="700" stroke="#047857" stroke-width="9" stroke-linecap="round"/>
+<polygon points="934,680 934,720 960, 700" fill="#047857"/>
+<text x="894" y="678" font-size="36" text-anchor="middle" fill="#047857">Yes</text>
+<rect x="960" y="620" width="760" height="160" rx="28" fill="#FEF3C7" stroke="#D97706" stroke-width="6"/>
+<text x="1340" y="694" font-size="48" text-anchor="middle" fill="#92400E">Hash map / Counter</text>
+<text x="1340" y="746" font-size="32" text-anchor="middle" fill="#374151">Anagrams, first non-repeating</text>
+<line x1="460" y1="780" x2="460" y2="882" stroke="#B91C1C" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,876 480,876 460,900" fill="#B91C1C"/>
+<text x="496" y="854" font-size="36" fill="#B91C1C">No</text>
+<rect x="80" y="900" width="760" height="160" rx="28" fill="#F8FAFC" stroke="#111827" stroke-width="5"/>
+<circle cx="140" cy="980" r="32" fill="#111827"/>
+<text x="140" y="992" font-size="36" text-anchor="middle" fill="#FFFFFF">3</text>
+<text x="510" y="972" font-size="36" text-anchor="middle">Are there many range queries</text>
+<text x="510" y="1018" font-size="36" text-anchor="middle">on the same string?</text>
+<line x1="840" y1="980" x2="940" y2="980" stroke="#047857" stroke-width="9" stroke-linecap="round"/>
+<polygon points="934,960 934,1000 960, 980" fill="#047857"/>
+<text x="894" y="958" font-size="36" text-anchor="middle" fill="#047857">Yes</text>
+<rect x="960" y="900" width="760" height="160" rx="28" fill="#DCFCE7" stroke="#059669" stroke-width="6"/>
+<text x="1340" y="974" font-size="48" text-anchor="middle" fill="#065F46">Prefix counts</text>
+<text x="1340" y="1026" font-size="32" text-anchor="middle" fill="#374151">Count a property in a range</text>
+<line x1="460" y1="1060" x2="460" y2="1162" stroke="#B91C1C" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,1156 480,1156 460,1180" fill="#B91C1C"/>
+<text x="496" y="1134" font-size="36" fill="#B91C1C">No</text>
+<rect x="80" y="1180" width="760" height="160" rx="28" fill="#F8FAFC" stroke="#111827" stroke-width="5"/>
+<circle cx="140" cy="1260" r="32" fill="#111827"/>
+<text x="140" y="1272" font-size="36" text-anchor="middle" fill="#FFFFFF">4</text>
+<text x="510" y="1252" font-size="36" text-anchor="middle">Do you compare characters</text>
+<text x="510" y="1298" font-size="36" text-anchor="middle">from both ends, in place?</text>
+<line x1="840" y1="1260" x2="940" y2="1260" stroke="#047857" stroke-width="9" stroke-linecap="round"/>
+<polygon points="934,1240 934,1280 960, 1260" fill="#047857"/>
+<text x="894" y="1238" font-size="36" text-anchor="middle" fill="#047857">Yes</text>
+<rect x="960" y="1180" width="760" height="160" rx="28" fill="#EDE9FE" stroke="#7C3AED" stroke-width="6"/>
+<text x="1340" y="1254" font-size="48" text-anchor="middle" fill="#5B21B6">Two pointers</text>
+<text x="1340" y="1306" font-size="32" text-anchor="middle" fill="#374151">Palindrome, in-place checks</text>
+<line x1="460" y1="1340" x2="460" y2="1442" stroke="#B91C1C" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,1436 480,1436 460,1460" fill="#B91C1C"/>
+<text x="496" y="1414" font-size="36" fill="#B91C1C">No</text>
+<rect x="80" y="1460" width="760" height="160" rx="28" fill="#F8FAFC" stroke="#111827" stroke-width="5"/>
+<circle cx="140" cy="1540" r="32" fill="#111827"/>
+<text x="140" y="1552" font-size="36" text-anchor="middle" fill="#FFFFFF">5</text>
+<text x="510" y="1532" font-size="36" text-anchor="middle">Do you need to find one</text>
+<text x="510" y="1578" font-size="36" text-anchor="middle">string inside another?</text>
+<line x1="840" y1="1540" x2="940" y2="1540" stroke="#047857" stroke-width="9" stroke-linecap="round"/>
+<polygon points="934,1520 934,1560 960, 1540" fill="#047857"/>
+<text x="894" y="1518" font-size="36" text-anchor="middle" fill="#047857">Yes</text>
+<rect x="960" y="1460" width="760" height="160" rx="28" fill="#FFE4E6" stroke="#E11D48" stroke-width="6"/>
+<text x="1340" y="1534" font-size="48" text-anchor="middle" fill="#9F1239">find / in, then KMP</text>
+<text x="1340" y="1586" font-size="32" text-anchor="middle" fill="#374151">KMP if worst case matters</text>
+<line x1="460" y1="1620" x2="460" y2="1722" stroke="#B91C1C" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,1716 480,1716 460,1740" fill="#B91C1C"/>
+<text x="496" y="1694" font-size="36" fill="#B91C1C">No</text>
+<rect x="80" y="1740" width="760" height="160" rx="28" fill="#F8FAFC" stroke="#111827" stroke-width="5"/>
+<circle cx="140" cy="1820" r="32" fill="#111827"/>
+<text x="140" y="1832" font-size="36" text-anchor="middle" fill="#FFFFFF">6</text>
+<text x="510" y="1812" font-size="36" text-anchor="middle">Do many words share the</text>
+<text x="510" y="1858" font-size="36" text-anchor="middle">same beginnings?</text>
+<line x1="840" y1="1820" x2="940" y2="1820" stroke="#047857" stroke-width="9" stroke-linecap="round"/>
+<polygon points="934,1800 934,1840 960, 1820" fill="#047857"/>
+<text x="894" y="1798" font-size="36" text-anchor="middle" fill="#047857">Yes</text>
+<rect x="960" y="1740" width="760" height="160" rx="28" fill="#CCFBF1" stroke="#0D9488" stroke-width="6"/>
+<text x="1340" y="1814" font-size="48" text-anchor="middle" fill="#115E59">Trie</text>
+<text x="1340" y="1866" font-size="32" text-anchor="middle" fill="#374151">Autocomplete, shared prefixes</text>
+<line x1="460" y1="1900" x2="460" y2="2002" stroke="#B91C1C" stroke-width="9" stroke-linecap="round"/>
+<polygon points="440,1996 480,1996 460,2020" fill="#B91C1C"/>
+<text x="496" y="1974" font-size="36" fill="#B91C1C">No</text>
+<rect x="80" y="2020" width="760" height="230" rx="28" fill="#FEF2F2" stroke="#DC2626" stroke-width="6"/>
+<text x="460" y="2086" font-size="44" text-anchor="middle" fill="#B91C1C">Re-read the problem</text>
+<text x="460" y="2136" font-size="32" text-anchor="middle">Is it a substring or a subsequence?</text>
+<text x="460" y="2184" font-size="30" text-anchor="middle" fill="#374151">A substring is contiguous.</text>
+<text x="460" y="2224" font-size="30" text-anchor="middle" fill="#374151">A subsequence is not.</text>
+<rect x="960" y="2020" width="760" height="230" rx="28" fill="#ECFDF5" stroke="#059669" stroke-width="6"/>
+<text x="1340" y="2082" font-size="40" text-anchor="middle" fill="#047857">Tip: techniques combine</text>
+<text x="1340" y="2132" font-size="32" text-anchor="middle">Longest unique substring uses</text>
+<text x="1340" y="2180" font-size="32" text-anchor="middle">a window and a dictionary</text>
+</g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjYWRjMzMzYi03NGI0LTQ0NGYtYWI3YS1iOWRlMWQzNDBmYjYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaNcaEX7yxWiFxWGzqNZhrPEAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0NWRiOWJlZC1hYTU5LTRiMDEtYTE5Yi00NDYxZjg1MjJiNjdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoDiYBq9tCEuPFxI+SS/DWbQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggtAcxZ7IN43HufO9Lm43oXaTIhcB/WcRCP1reL76TGOqkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaGW7tViVK23U8xwKTnsEiqMAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYILyIOxMFAHELzkMGh2bWXbahm8ivoI6mpb7Lb/nzDlV3ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSTsZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmNhZGMzMzNiLTc0YjQtNDQ0Zi1hYjdhLWI5ZGUxZDM0MGZiNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmE1MDkyNDMzLTRjMDEtNDU0ZC05ZDFhLTBhNTA0ZDMwZTU5OXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCC0BzFnsg3jce5870ubjehdpMiFwH9ZxEI/Wt4vvpMY6qJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggHyihprsrzj9ktQ1ztmKHuzf30+xoZoCqEnqpJMWqVE2iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggXJn0wDE3Mh8rAIwuETq9p0qNZr5eCAu3Qb14EuYtdvR0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQIbyuGZwZozaudffTdx31oPiEipWobPHwq8GOn8y/N+TiKz3UHgmXbiUUVPt5Tzlb2p64UoU1k0dhH8Tjv4qpy8=</c2pa:manifest></metadata></svg>

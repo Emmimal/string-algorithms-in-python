@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 2270" width="1800" height="2270" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest">
+<title id="t">KMP LPS table for the pattern abab</title>
+<desc id="d">The LPS array for abab is 0, 0, 1, 2. For each position, the diagram highlights the prefix from the front and the suffix from the back that match: a matches a at index 2, and ab matches ab at index 3.</desc>
+<rect width="1800" height="2270" fill="#FFFFFF"/>
+<g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" font-weight="700" fill="#111827">
+<text x="900" y="90" font-size="58" text-anchor="middle">KMP LPS Table for "abab"</text>
+<text x="900" y="145" font-size="32" text-anchor="middle" fill="#374151">LPS = longest proper prefix that is also a suffix</text>
+<rect x="100" y="187" width="64" height="56" rx="12" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="184" y="226" font-size="30">prefix (from the front)</text>
+<rect x="640" y="187" width="64" height="56" rx="12" fill="#FFEDD5" stroke="#EA580C" stroke-width="5"/>
+<text x="724" y="226" font-size="30">suffix (from the back)</text>
+<text x="1180" y="226" font-size="30" fill="#374151">proper = not whole string</text>
+<text x="900" y="330" font-size="42" text-anchor="middle">Final LPS table</text>
+<text x="670" y="408" font-size="38" text-anchor="end">index</text>
+<text x="670" y="503" font-size="38" text-anchor="end">pattern</text>
+<text x="670" y="613" font-size="38" text-anchor="end">lps</text>
+<text x="780" y="408" font-size="38" text-anchor="middle" fill="#6B7280">0</text>
+<rect x="700" y="440" width="160" height="100" rx="16" fill="#F3F4F6" stroke="#6B7280" stroke-width="5"/>
+<text x="780" y="508" font-size="58" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="700" y="550" width="160" height="100" rx="16" fill="#DCFCE7" stroke="#059669" stroke-width="5"/>
+<text x="780" y="618" font-size="58" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">0</text>
+<text x="960" y="408" font-size="38" text-anchor="middle" fill="#6B7280">1</text>
+<rect x="880" y="440" width="160" height="100" rx="16" fill="#F3F4F6" stroke="#6B7280" stroke-width="5"/>
+<text x="960" y="508" font-size="58" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="880" y="550" width="160" height="100" rx="16" fill="#DCFCE7" stroke="#059669" stroke-width="5"/>
+<text x="960" y="618" font-size="58" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">0</text>
+<text x="1140" y="408" font-size="38" text-anchor="middle" fill="#6B7280">2</text>
+<rect x="1060" y="440" width="160" height="100" rx="16" fill="#F3F4F6" stroke="#6B7280" stroke-width="5"/>
+<text x="1140" y="508" font-size="58" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="1060" y="550" width="160" height="100" rx="16" fill="#DCFCE7" stroke="#059669" stroke-width="5"/>
+<text x="1140" y="618" font-size="58" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">1</text>
+<text x="1320" y="408" font-size="38" text-anchor="middle" fill="#6B7280">3</text>
+<rect x="1240" y="440" width="160" height="100" rx="16" fill="#F3F4F6" stroke="#6B7280" stroke-width="5"/>
+<text x="1320" y="508" font-size="58" text-anchor="middle" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="1240" y="550" width="160" height="100" rx="16" fill="#DCFCE7" stroke="#059669" stroke-width="5"/>
+<text x="1320" y="618" font-size="58" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">2</text>
+<text x="900" y="760" font-size="46" text-anchor="middle">How each value is found</text>
+<rect x="40" y="800" width="1720" height="270" rx="22" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="3"/>
+<text x="70" y="922" font-size="40">i = 0</text>
+<text x="70" y="968" font-size="34" fill="#374151" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">"a"</text>
+<rect x="330" y="880" width="100" height="100" rx="16" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="5"/>
+<text x="380" y="948" font-size="52" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<text x="385" y="1036" font-size="30" text-anchor="middle" fill="#6B7280">only one letter</text>
+<text x="880" y="900" font-size="34">No proper prefix exists</text>
+<text x="880" y="946" font-size="34" fill="#4B5563">So lps[0] = 0</text>
+<rect x="1470" y="870" width="260" height="110" rx="20" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="5"/>
+<text x="1600" y="937" font-size="38" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">lps[0] = 0</text>
+<rect x="40" y="1090" width="1720" height="270" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="3"/>
+<text x="70" y="1212" font-size="40">i = 1</text>
+<text x="70" y="1258" font-size="34" fill="#374151" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">"ab"</text>
+<rect x="330" y="1170" width="100" height="100" rx="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="380" y="1238" font-size="52" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1170" width="100" height="100" rx="16" fill="#FFEDD5" stroke="#EA580C" stroke-width="5"/>
+<text x="490" y="1238" font-size="52" text-anchor="middle" fill="#9A3412" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<line x1="330" y1="1156" x2="430" y2="1156" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+<text x="380" y="1138" font-size="30" text-anchor="middle" fill="#1E3A8A">prefix</text>
+<line x1="440" y1="1284" x2="540" y2="1284" stroke="#EA580C" stroke-width="8" stroke-linecap="round"/>
+<text x="490" y="1326" font-size="30" text-anchor="middle" fill="#9A3412">suffix</text>
+<text x="880" y="1190" font-size="34">prefix "a" vs suffix "b"</text>
+<text x="880" y="1236" font-size="34" fill="#4B5563">Different, so lps[1] = 0</text>
+<rect x="1470" y="1160" width="260" height="110" rx="20" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="5"/>
+<text x="1600" y="1227" font-size="38" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">lps[1] = 0</text>
+<rect x="40" y="1380" width="1720" height="270" rx="22" fill="#F8FAFC" stroke="#E5E7EB" stroke-width="3"/>
+<text x="70" y="1502" font-size="40">i = 2</text>
+<text x="70" y="1548" font-size="34" fill="#374151" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">"aba"</text>
+<rect x="330" y="1460" width="100" height="100" rx="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="380" y="1528" font-size="52" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1460" width="100" height="100" rx="16" fill="#F3F4F6" stroke="#9CA3AF" stroke-width="5"/>
+<text x="490" y="1528" font-size="52" text-anchor="middle" fill="#4B5563" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="550" y="1460" width="100" height="100" rx="16" fill="#FFEDD5" stroke="#EA580C" stroke-width="5"/>
+<text x="600" y="1528" font-size="52" text-anchor="middle" fill="#9A3412" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<line x1="330" y1="1446" x2="430" y2="1446" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+<text x="380" y="1428" font-size="30" text-anchor="middle" fill="#1E3A8A">prefix</text>
+<line x1="550" y1="1574" x2="650" y2="1574" stroke="#EA580C" stroke-width="8" stroke-linecap="round"/>
+<text x="600" y="1616" font-size="30" text-anchor="middle" fill="#9A3412">suffix</text>
+<text x="880" y="1480" font-size="34">prefix "a" vs suffix "a"</text>
+<text x="880" y="1526" font-size="34" fill="#047857">Same, so lps[2] = 1</text>
+<text x="880" y="1570" font-size="30" fill="#6B7280">Longer try: "ab" vs "ba" differ</text>
+<rect x="1470" y="1450" width="260" height="110" rx="20" fill="#DCFCE7" stroke="#059669" stroke-width="5"/>
+<text x="1600" y="1517" font-size="38" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">lps[2] = 1</text>
+<rect x="40" y="1670" width="1720" height="270" rx="22" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="3"/>
+<text x="70" y="1792" font-size="40">i = 3</text>
+<text x="70" y="1838" font-size="34" fill="#374151" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">"abab"</text>
+<rect x="330" y="1750" width="100" height="100" rx="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="380" y="1818" font-size="52" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="440" y="1750" width="100" height="100" rx="16" fill="#DBEAFE" stroke="#2563EB" stroke-width="5"/>
+<text x="490" y="1818" font-size="52" text-anchor="middle" fill="#1E3A8A" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<rect x="550" y="1750" width="100" height="100" rx="16" fill="#FFEDD5" stroke="#EA580C" stroke-width="5"/>
+<text x="600" y="1818" font-size="52" text-anchor="middle" fill="#9A3412" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">a</text>
+<rect x="660" y="1750" width="100" height="100" rx="16" fill="#FFEDD5" stroke="#EA580C" stroke-width="5"/>
+<text x="710" y="1818" font-size="52" text-anchor="middle" fill="#9A3412" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">b</text>
+<line x1="330" y1="1736" x2="540" y2="1736" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+<text x="435" y="1718" font-size="30" text-anchor="middle" fill="#1E3A8A">prefix</text>
+<line x1="550" y1="1864" x2="760" y2="1864" stroke="#EA580C" stroke-width="8" stroke-linecap="round"/>
+<text x="655" y="1906" font-size="30" text-anchor="middle" fill="#9A3412">suffix</text>
+<text x="880" y="1770" font-size="34">prefix "ab" vs suffix "ab"</text>
+<text x="880" y="1816" font-size="34" fill="#047857">Same, so lps[3] = 2</text>
+<text x="880" y="1860" font-size="30" fill="#6B7280">Longer try: "aba" vs "bab" differ</text>
+<rect x="1470" y="1740" width="260" height="110" rx="20" fill="#DCFCE7" stroke="#059669" stroke-width="5"/>
+<text x="1600" y="1807" font-size="38" text-anchor="middle" fill="#047857" font-family="Consolas, 'SF Mono', Menlo, 'DejaVu Sans Mono', monospace">lps[3] = 2</text>
+<rect x="100" y="1980" width="1600" height="230" rx="26" fill="#ECFDF5" stroke="#059669" stroke-width="5"/>
+<text x="900" y="2044" font-size="42" text-anchor="middle" fill="#047857">Why the table helps</text>
+<text x="900" y="2100" font-size="32" text-anchor="middle">After matching "abab", a mismatch makes KMP jump to lps[3] = 2</text>
+<text x="900" y="2148" font-size="32" text-anchor="middle">It keeps "ab" and never moves the text pointer backward</text>
+<text x="900" y="2190" font-size="28" text-anchor="middle" fill="#374151">Search time O(n + m)  |  Table space O(m)</text>
+</g>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo4ZjEwYjI4NC0zMTY2LTRlMjEtYmM5NS1mNjc1NDZkODZiNDIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGsQGfz16dMy3KNg+zoEfF4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoxODllMjRlYi1mYmM3LTQxYWUtOTMzNC1iZTg3OWZlNWNkMjVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoRlfzMIP4OexaxckYeQTSzgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggRO7VoJ35oVW8FP+HdlEO/HF7hOFaTx+tA6qBzpvfbVukZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJIQINiORNwqnrRXI7Ce+j0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIDHCoPwgV6wUSH9TKBcockEkt1QbJ8A6vcHbAlrbV+rtZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSzhZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjhmMTBiMjg0LTMxNjYtNGUyMS1iYzk1LWY2NzU0NmQ4NmI0Mi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjg5NTJlMGE5LWU2ZmEtNGI2OS04MjExLThjZGUxMWMyM2FhN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBE7tWgnfmhVbwU/4d2UQ78cXuE4VpPH60DqoHOm99tW6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg4n7pHu+XJBwJrdhzHKaqEr/ZcrbBaND5sAWgMSGHMCqiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg/EGfv1ZP9H2tQxuLmre17TzwwLqYaTGemGwfiflkQg50Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQBVUe7Aq5iZXmD0wFKGv2PZl7haZA4gy57fBV40+p5c+fE/f423MaWI3Fl5N4nLAxajG4AzppcDF9uw7cp5YESs=</c2pa:manifest></metadata></svg>
